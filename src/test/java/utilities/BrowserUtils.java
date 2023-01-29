@@ -314,7 +314,6 @@ public class BrowserUtils {
 
     /**
      * executes the given JavaScript command on given web element
-     *
      * @param command
      */
     public static void executeJSCommand(String command) {
@@ -327,26 +326,20 @@ public class BrowserUtils {
     /**
      * This method will recover in case of exception after unsuccessful the click,
      * and will try to click on element again.
-     *
      * @param by
      * @param attempts
      */
     public static void clickWithWait(By by, int attempts) {
         int counter = 0;
-        //click on element as many as you specified in attempts parameter
+
         while (counter < attempts) {
             try {
-                //selenium must look for element again
                 clickWithJS(Driver.getDriver().findElement(by));
-                //if click is successful - then break
+
                 break;
             } catch (WebDriverException e) {
-                //if click failed
-                //print exception
-                //print attempt
                 e.printStackTrace();
                 ++counter;
-                //wait for 1 second, and try to click again
                 waitFor(1);
             }
         }
