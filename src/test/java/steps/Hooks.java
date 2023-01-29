@@ -11,20 +11,19 @@ public class Hooks {
 
 	@Before("@db")
 	public void dbHook() {
-		System.out.println("creating database connection");
+		System.out.println("Creating the database connection");
 		utilities.DBUtils.createConnection();
 	}
 	
 	@After("@db")
 	public void afterDbHook() {
-		System.out.println("closing database connection");
+		System.out.println("Closing the database connection");
 		utilities.DBUtils.destroyConnection();
 	}
 	
 	@Before("@ui")
 	public void setUp() {
-		// we put a logic that should apply to every scenario
-		System.out.println("Setting up webdriver");
+		System.out.println("Setting up webDriver");
 		Driver.getDriver();
 
 	}
