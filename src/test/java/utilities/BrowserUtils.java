@@ -322,7 +322,6 @@ public class BrowserUtils {
 
     }
 
-
     /**
      * This method will recover in case of exception after unsuccessful the click,
      * and will try to click on element again.

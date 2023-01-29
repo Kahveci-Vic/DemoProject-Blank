@@ -52,7 +52,6 @@ public class ExcelUtil {
             }
         }
         return data;
-
     }
 
     //this method will return data table as 2d array
@@ -81,16 +80,14 @@ public class ExcelUtil {
             // get each row
             Row row = workSheet.getRow(i);
             // create map of the row using the column and value
-            // column map key, cell value --> map bvalue
+            // column map key, cell value --> map value
             LinkedHashMap<String, String> rowMap = new LinkedHashMap<>();
             for (Cell cell : row) {
                 int columnIndex = cell.getColumnIndex();
                 rowMap.put(columns.get(columnIndex), cell.toString());
             }
-
             data.add(rowMap);
         }
-
         return data;
     }
 
