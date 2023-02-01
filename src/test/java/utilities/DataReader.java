@@ -17,8 +17,6 @@ public class DataReader {
         try {
            String jsonContent= FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
 
-           //System.getProperty("user.dir")+ "/IdeaProjects/DemoProject-Blank/test.json"
-
             ObjectMapper mapper= new ObjectMapper();
             List<HashMap<String,String>> data= mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {});
             return data;

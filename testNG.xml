@@ -1,0 +1,24 @@
+<suite parallel="test" name="Suite">
+    <listeners>
+        <listener class-name="utilities.testNG.Listener"/>
+    </listeners>
+
+    <test thread-count="5">
+        <classes>
+            <class>
+
+            </class>
+
+        </classes>
+    </test>
+
+    <test thread-count="5">
+        <classes>
+            <class>
+                //you can specify here
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
